@@ -1,0 +1,40 @@
+<h2 class="mb-4 text-center">Search Car</h2>
+<div class="mb-4 d-flex justify-content-center">
+<input
+  placeholder="Search car"
+  class="form-control me-2 custom-border"
+  style="max-width: 500px;"
+  [(ngModel)]="searchTerm"
+  (ngModelChange)="onSearchTermChange($event)"
+/>
+  <!-- <button class="btn btn-primary" (click)="onSearchTermChange(searchTerm)">Search</button> -->
+</div>
+
+<h2 class="mb-4 text-center">Cars Data</h2>
+<div class="container">
+  <div class="row">
+    <!-- Loop through paginatedCars and create a card for each car -->
+    <div *ngFor="let car of paginatedCars" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ car.name }}</h5>
+          <p class="card-text"><strong>MPG:</strong> {{ car.mpg }}</p>
+          <p class="card-text"><strong>Cylinders:</strong> {{ car.cylinders }}</p>
+          <p class="card-text"><strong>Displacement:</strong> {{ car.displacement }}</p>
+          <p class="card-text"><strong>Horsepower:</strong> {{ car.horsepower }}</p>
+          <p class="card-text"><strong>Weight:</strong> {{ car.weight }}</p>
+          <p class="card-text"><strong>Acceleration:</strong> {{ car.acceleration }}</p>
+          <p class="card-text"><strong>Model Year:</strong> {{ car.model_year }}</p>
+          <p class="card-text"><strong>Origin:</strong> {{ car.origin }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination Controls -->
+  <div class="pagination-controls d-flex justify-content-center align-items-center mt-4">
+    <button class="btn btn-primary me-2" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+    <span class="mx-2">Page {{ currentPage }}</span>
+    <button class="btn btn-primary ms-2" (click)="nextPage()" [disabled]="(currentPage * carsPerPage) >= cars.length">Next</button>
+  </div>
+</div>
