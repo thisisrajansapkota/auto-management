@@ -2,21 +2,21 @@
 
 /* Global Styles */
 body {
-  font-family: 'Roboto', sans-serif; 
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background-color: #f8f9fa;
   margin: 0;
   padding: 0;
-  color: #212529; 
+  color: #212529;
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif; 
+  font-family: 'Montserrat', sans-serif;
   color: #343a40;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  font-weight: 600; 
+  font-weight: 600;
 }
 
 p {
@@ -37,31 +37,18 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Button Styles */
 button {
   font-family: 'Montserrat', sans-serif; /* Montserrat for strong button text */
-  background-color: #007bff;
+  background: linear-gradient(to right, #00b09b, #96c93d);
   color: #fff;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background: linear-gradient(to right, #00b09b, #00a080);
 }
-
-input, textarea {
-  font-family: 'Roboto', sans-serif;
-  padding: 10px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-input:focus, textarea:focus {
-  border-color: #80bdff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
-}
-

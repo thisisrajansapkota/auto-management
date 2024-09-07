@@ -1,23 +1,22 @@
-<h2 class="mb-4 text-center">Search Car</h2>
-<div class="mb-4 d-flex justify-content-center">
-<input
-  placeholder="Search car"
-  class="form-control me-2 custom-border"
-  style="max-width: 500px;"
-  [(ngModel)]="searchTerm"
-  (ngModelChange)="onSearchTermChange($event)"
-/>
-  <!-- <button class="btn btn-primary" (click)="onSearchTermChange(searchTerm)">Search</button> -->
+<h2 class="mb-4 text-center font-monospace">Search Car</h2>
+<div class="mb-4 d-flex justify-content-center font-monospace">
+  <input
+    placeholder="Search car"
+    class="form-control me-2 custom-border shadow"
+    style="max-width: 500px;"
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="onSearchTermChange($event)"
+  />
 </div>
 
-<h2 class="mb-4 text-center">Cars Data</h2>
+<h2 class="mb-4 text-center font-monospace">Cars Data</h2>
 <div class="container">
-  <div class="row">
+  <div class="row d-flex justify-content-center">
     <!-- Loop through paginatedCars and create a card for each car -->
     <div *ngFor="let car of paginatedCars" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
       <div class="card h-100">
         <div class="card-body">
-          <h5 class="card-title">{{ car.name }}</h5>
+          <h5 class="card-title text-center mb-3 text-capitalize">{{ car.name }}</h5>
           <p class="card-text"><strong>MPG:</strong> {{ car.mpg }}</p>
           <p class="card-text"><strong>Cylinders:</strong> {{ car.cylinders }}</p>
           <p class="card-text"><strong>Displacement:</strong> {{ car.displacement }}</p>
@@ -36,5 +35,10 @@
     <button class="btn btn-primary me-2" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
     <span class="mx-2">Page {{ currentPage }}</span>
     <button class="btn btn-primary ms-2" (click)="nextPage()" [disabled]="(currentPage * carsPerPage) >= cars.length">Next</button>
+  </div>
+
+  <!-- Download CSV Button -->
+  <div class="d-flex justify-content-center mt-4">
+    <button class="btn btn-success" (click)="downloadCSV()">Download Results</button>
   </div>
 </div>

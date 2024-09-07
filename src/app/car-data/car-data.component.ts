@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { inject } from '@angular/core';
+import * as Papa from 'papaparse';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-car-data',
@@ -65,5 +67,17 @@ export class CarDataComponent implements OnInit {
     this.searchTerm = term;
     this.currentPage = 1; // Reset to first page when search term changes
     this.updatePaginatedCars();
+  }
+
+  // Download search results as CSV
+  downloadCSV() {
+    const filteredCars = this.cars.filter((car) =>
+      car.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+
+    const csv = Papa.unparse(filteredCars);
+
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    saveAs(blob, 'cars.csv');
   }
 }

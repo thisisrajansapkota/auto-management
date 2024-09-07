@@ -1,0 +1,52 @@
+<h1 class="mb-4 text-center">Add New Car</h1>
+
+<div class="container">
+  <form (ngSubmit)="addCar()">
+    <div class="form-group mb-3">
+      <label for="name">Car Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="car.name" name="name" required />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="mpg">MPG</label>
+      <input type="number" class="form-control" id="mpg" [(ngModel)]="car.mpg" name="mpg" required />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="cylinders">Cylinders</label>
+      <input type="number" class="form-control" id="cylinders" [(ngModel)]="car.cylinders" name="cylinders" required />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="displacement">Displacement</label>
+      <input type="text" class="form-control" id="displacement" [(ngModel)]="car.displacement" name="displacement" required />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="horsepower">Horsepower</label>
+      <input type="number" class="form-control" id="horsepower" [(ngModel)]="car.horsepower" name="horsepower" required />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="weight">Weight</label>
+      <input type="number" class="form-control" id="weight" [(ngModel)]="car.weight" name="weight" required />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="acceleration">Acceleration</label>
+      <input type="number" class="form-control" id="acceleration" [(ngModel)]="car.acceleration" name="acceleration" required />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="model_year">Model Year</label>
+      <input type="number" class="form-control" id="model_year" [(ngModel)]="car.model_year" name="model_year" required />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="origin">Origin</label>
+      <input type="text" class="form-control" id="origin" [(ngModel)]="car.origin" name="origin" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary w-25 m-auto">Add Car</button>
+  </form>
+</div>
