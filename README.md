@@ -1,6 +1,6 @@
 # Angular Firebase CSV Upload & Display
 
-This Angular project allows users to upload a CSV file, parse it, upload the data to Firebase Firestore, and display the data on the browser. The CSV file contains information about cars with attributes such as name, mpg, cylinders, displacement, horsepower, weight, acceleration, model year, and origin.
+This Angular project allows users to upload CSV data to Firestore database, display the data on the browser, search and filter through the data.
 
 ## Features
 
@@ -8,6 +8,7 @@ This Angular project allows users to upload a CSV file, parse it, upload the dat
 - Parse CSV data using PapaParse
 - Store parsed data in Firebase Firestore
 - Fetch and display data from Firestore in the browser
+- Download search results as CSV.
 
 ## Tech Stack
 

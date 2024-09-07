@@ -2,12 +2,12 @@ export const environment = {
   production: false,
 
   firebase: {
-    apiKey: 'AIzaSyB-165nYo5dEQ7vNBBx_qeea2AX1cjR8Qo',
-    authDomain: 'auto-management-19c19.firebaseapp.com',
-    projectId: 'auto-management-19c19',
-    storageBucket: 'auto-management-19c19.appspot.com',
-    messagingSenderId: '290242902549',
-    appId: '1:290242902549:web:d43d6d3735e46a30da2c1c'
+    apiKey: 'AIzaSyAbiI4rrUxJt9j54xDnarQrjRJSq6I8HE4',
+    authDomain: 'auto-management-fbc1e.firebaseapp.com',
+    projectId: 'auto-management-fbc1e',
+    storageBucket: 'auto-management-fbc1e.appspot.com',
+    messagingSenderId: '29952458310',
+    appId: '1:29952458310:web:05bc3f70f6b98cf8ab9447'
   },
 };
 
