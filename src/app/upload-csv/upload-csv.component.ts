@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import * as Papa from 'papaparse';
 import { Firestore, collection, addDoc } from '@angular/fire/firestore';
 import { inject } from '@angular/core';
+import Toastify from 'toastify-js';
+import 'toastify-js/src/toastify.css';
 
 @Component({
   selector: 'app-upload-csv',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './upload-csv.component.html',
-  styleUrls: ['./upload-csv.component.scss'],
+  styleUrls: ['./upload-csv.component.css'],
 })
 export class UploadCsvComponent {
   selectedFile: File | null = null;
@@ -49,8 +51,19 @@ export class UploadCsvComponent {
           console.error('Error adding document:', error);
         }
       }
+      // Show success toast
+      this.showSuccessToast();
     } else {
       console.log('No data to upload');
     }
+  }
+
+  showSuccessToast() {
+    Toastify({
+      text: 'File uploaded successfully!',
+      backgroundColor: 'linear-gradient(to right, #00b09b, #96c93d)',
+      className: 'info',
+      duration: 1000,
+    }).showToast();
   }
 }

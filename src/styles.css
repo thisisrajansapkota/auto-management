@@ -1,16 +1,67 @@
-/* styles.css or styles.scss */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap');
 
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif; 
   line-height: 1.6;
   background-color: #f8f9fa;
   margin: 0;
   padding: 0;
+  color: #212529; 
 }
 
 h1 {
+  font-family: 'Montserrat', sans-serif; 
   color: #343a40;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
+  font-weight: 600; 
 }
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #212529;
+  margin-bottom: 20px;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif; /* Montserrat for strong button text */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input, textarea {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+

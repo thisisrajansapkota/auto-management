@@ -1,0 +1,44 @@
+.upload-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 2px solid #00b09b;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .title {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    input {
+      padding: 0.5rem;
+      font-size: 16px;
+    }
+  }
+
+  .upload-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: linear-gradient(to right, #00b09b, #00a080);
+    }
+  }
+}
